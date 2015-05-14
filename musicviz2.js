@@ -28,14 +28,5 @@ function loadSong(url) {
       source.start(0);
     }, function () { console.error('The request failed.'); } );
   }
-}
-
-var context = new webkitAudioContext();
-
-function playSong(buffer) {
-  var source = context.createBufferSource(); // creates a sound source
-  source.buffer = buffer;                    // tell the source which sound to play
-  source.connect(context.destination);       // connect the source to the context's destination (the speakers)
-  source.start(0);                           // play the source now
-                                             // note: on older systems, may have to use deprecated noteOn(time);
+  request.send();
 }
