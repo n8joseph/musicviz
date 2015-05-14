@@ -1,4 +1,4 @@
-function playSong(
+function playSong() {
 
 var url  = 'citt.mp3';
 
@@ -29,4 +29,4 @@ var url  = 'citt.mp3';
   }
   //Now that the request has been defined, actually make the request. (send it)
   request.send();
-)
+}
