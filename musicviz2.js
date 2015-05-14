@@ -1,4 +1,4 @@
-function playSong(url) {
+function loadSong(url) {
 
 
 
@@ -20,6 +20,8 @@ function playSong(url) {
   //Once the request has completed... do this
   request.onload = function() {
     context.decodeAudioData(request.response, function(response) {
+    };
+function playSong(){
       /* --- play the sound AFTER we've gotten the buffer loaded --- */
       //set the buffer to the response we just received.
       source.buffer = response;
@@ -29,4 +31,4 @@ function playSong(url) {
   }
   //Now that the request has been defined, actually make the request. (send it)
   request.send();
-}
+};
