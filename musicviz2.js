@@ -1,6 +1,6 @@
-function playSong() {
+function playSong(url) {
 
-var url  = 'citt.mp3';
+
 
   /* --- set up web audio --- */
   //create the context
