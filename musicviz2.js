@@ -12,7 +12,7 @@ function loadSong(url) {
 
   /* --- load up that buffer ---  */
   //Basic start to ajax! (I say basic, yet i don't know it well.)
-  var request = new XMLHttpRequest();
+  this.request = new XMLHttpRequest();
   //open the request...?
   request.open('GET', url, true); 
   //I don't even know.
@@ -32,5 +32,5 @@ function loadSong(url) {
 
 function playSong(){
   //Now that the request has been defined, actually make the request. (send it)
-  request.send();
+  loadSong.send();
 };
