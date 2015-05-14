@@ -30,7 +30,7 @@ function loadSong(url) {
   }
 }
 
-
+var context = new webkitAudioContext();
 
 function playSong(buffer) {
   var source = context.createBufferSource(); // creates a sound source
