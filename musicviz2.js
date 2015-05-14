@@ -28,7 +28,7 @@ function loadSong(url) {
       source.start(0);
     }, function () { console.error('The request failed.'); } );
   }
-};
+}
 
 function playSong(){
   //Now that the request has been defined, actually make the request. (send it)
