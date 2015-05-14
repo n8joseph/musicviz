@@ -12,7 +12,7 @@ function loadSong(url) {
 
   /* --- load up that buffer ---  */
   //Basic start to ajax! (I say basic, yet i don't know it well.)
-  this.request = new XMLHttpRequest();
+  var request = new XMLHttpRequest();
   //open the request...?
   request.open('GET', url, true); 
   //I don't even know.
@@ -30,7 +30,12 @@ function loadSong(url) {
   }
 }
 
-function playSong(){
-  //Now that the request has been defined, actually make the request. (send it)
-  loadSong.send();
-};
+
+
+function playSong(buffer) {
+  var source = context.createBufferSource(); // creates a sound source
+  source.buffer = buffer;                    // tell the source which sound to play
+  source.connect(context.destination);       // connect the source to the context's destination (the speakers)
+  source.start(0);                           // play the source now
+                                             // note: on older systems, may have to use deprecated noteOn(time);
+}
