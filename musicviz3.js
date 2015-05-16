@@ -11,7 +11,7 @@
   //Basic start to ajax! (I say basic, yet i don't know it well.)
   var request = new XMLHttpRequest();
   //open the request...?
-  request.open('GET', url, true); 
+  request.open('GET', 'citt.mp3', true); 
   //I don't even know.
   request.responseType = 'arraybuffer';
   //Once the request has completed... do this
