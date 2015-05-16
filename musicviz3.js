@@ -16,7 +16,7 @@
   request.responseType = 'arraybuffer';
   //Once the request has completed... do this
 
-
+function playSong(){
 
 request.onload = function() {
     context.decodeAudioData(request.response, function(response) {
@@ -29,6 +29,6 @@ request.onload = function() {
     }, function () { console.error('The request failed.'); } );
   }
   request.send();
-
+};
 
 
