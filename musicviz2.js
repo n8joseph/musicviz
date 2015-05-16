@@ -4,7 +4,7 @@ function loadSong(url) {
 
   /* --- set up web audio --- */
   //create the context
-  var context = new webkitAudioContext();
+  var context = new AudioContext();
   //...and the source
   var source = context.createBufferSource();
   //connect it to the destination so you can hear it.
