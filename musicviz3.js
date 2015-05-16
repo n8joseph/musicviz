@@ -23,7 +23,7 @@ function loadSong(url) {
 
 function playSong(){
 
-request.onload = function() {
+loadSong.request.onload = function() {
     loadSong.context.decodeAudioData(loadSong.request.response, function(response) {
   
       /* --- play the sound AFTER we've gotten the buffer loaded --- */
