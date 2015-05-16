@@ -30,4 +30,5 @@ function loadSong(url) {
   }
   request.send();
 }
-window.onload = loadSong('citt.mp3');
+window.addEventListener("load", loadSong('citt.mp3'));
+
