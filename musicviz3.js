@@ -31,4 +31,13 @@ request.onload = function() {
   request.send();
 };
 
+// Assume context is a web audio context, buffer is a pre-loaded audio buffer.
+var startOffset = 0;
+var startTime = 0;
+
+function pause() {
+  source.stop();
+  // Measure how much time passed since the last pause.
+  startOffset += context.currentTime - startTime;
+};
 
