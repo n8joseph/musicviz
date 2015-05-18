@@ -21,12 +21,12 @@ window.addEventListener('load', function(e) {
 
 function aud_play_pause() {
     if (audio.paused) {
-      $('#stateicon').removeClass('fa fa-play');
-      $('#stateicon').addClass('fa fa-pause');
+      //  $('#stateicon').removeClass('fa fa-play');
+      //  $('#stateicon').addClass('fa fa-pause');
       audio.play();
     } else {
-      $('#stateicon').removeClass('fa fa-pause');
-      $('#stateicon').addClass('fa fa-play');
+     //   $('#stateicon').removeClass('fa fa-pause');
+     //   $('#stateicon').addClass('fa fa-play');
       audio.pause();
    }
  }
