@@ -17,7 +17,3 @@ window.addEventListener('load', function(e) {
 
   // ...call requestAnimationFrame() and render the analyser's output to canvas.
 }, false);
-
-function playItGood(){
-  audio.play
-}
