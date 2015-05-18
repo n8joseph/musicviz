@@ -16,6 +16,8 @@
   request.responseType = 'arraybuffer';
   //Once the request has completed... do this
 
+var startOffset = 0;
+
 function playSong(){
 
 request.onload = function() {
@@ -32,7 +34,7 @@ request.onload = function() {
 };
 
 // Assume context is a web audio context, buffer is a pre-loaded audio buffer.
-var startOffset = 0;
+
 var startTime = 0;
 
 function pause() {
