@@ -25,7 +25,7 @@ request.onload = function() {
       //set the buffer to the response we just received.
       source.buffer = response;
       //And off we go! .start(0) should play asap.
-      source.start(0);
+      source.start(0, startOffset % buffer.duration);
     }, function () { console.error('The request failed.'); } );
   }
   request.send();
