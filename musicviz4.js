@@ -18,3 +18,16 @@ window.addEventListener('load', function(e) {
 
   // ...call requestAnimationFrame() and render the analyser's output to canvas.
 }, false);
+
+function aud_play_pause() {
+    var myAudio = document.getElementById("myTune");
+    if (myAudio.paused) {
+      $('#stateicon').removeClass('fa fa-play');
+      $('#stateicon').addClass('fa fa-pause');
+      myAudio.play();
+    } else {
+      $('#stateicon').removeClass('fa fa-pause');
+      $('#stateicon').addClass('fa fa-play');
+      myAudio.pause();
+   }
+ }
