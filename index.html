@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script type="text/javascript" src="musicviz3.js"></script>
+    <script type="text/javascript" src="musicviz4.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -21,6 +22,11 @@
       <body>
         <button onclick="playSong()">Click Me To Play "Pick Me Up"</button>
         <button onclick="pause()">Pause</button>
+        <div></div>
+        <button onclick="document.getElementById('audio').play()">Play</button> 
+        <button onclick="document.getElementById('audio').pause()">Pause</button> 
+        <button onclick="document.getElementById('audio').volume += 0.1">Vol+ </button> 
+        <button onclick="document.getElementById('audio').volume -= 0.1">Vol- </button> 
         
       </body>
 
