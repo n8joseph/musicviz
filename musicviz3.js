@@ -41,3 +41,13 @@ function pause() {
   startOffset += context.currentTime - startTime;
 };
 
+function play() {
+  startTime = context.currentTime;
+  var source = context.createBufferSource();
+  // Connect graph
+  source.buffer = this.buffer;
+  source.loop = true;
+  source.connect(context.destination);
+  // Start playback, but make sure we stay in bound of the buffer.
+  source.start(0, startOffset % buffer.duration);
+}
