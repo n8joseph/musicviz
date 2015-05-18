@@ -3,6 +3,7 @@ var audio = new Audio();
 audio.src = 'citt.mp3';
 audio.controls = true;
 audio.autoplay = false;
+audio.id = 'myaudioid';
 document.body.appendChild(audio);
 
 var context = new webkitAudioContext();
