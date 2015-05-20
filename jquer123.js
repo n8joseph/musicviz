@@ -1,7 +1,7 @@
 $(document).ready(function() {
        $('$slick-toggle').click(function() {
               $('img', this).attr('src', function(i, oldSrc) {
-                            return oldSrc == 'img1.jpg' ? 'img2.jpg' : 'img1.jpg';
+                            return oldSrc == 'http://cdn.flaticon.com/png/256/58315.png' ? 'http://cdn.flaticon.com/png/256/54505.png' : 'http://cdn.flaticon.com/png/256/58315.png';
               });
               $('#slickbox').toggle(400);
               return false;
