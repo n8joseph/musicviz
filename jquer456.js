@@ -4,7 +4,7 @@ $(document).ready(function() {
                     $(this).animate({'opacity':'1'}, 100);
               },
               function (){
-                    $(this).animate({'opacity':'0.1'}, 100);
+                    $(this).animate({'opacity':'0.07'}, 100);
              });
   
   });
