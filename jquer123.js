@@ -10,10 +10,10 @@ $(document).ready(function() {
        
       $('#playbar').mouseover(function() {
              $('#playbar').hover(function() {
-                     $('#playbar').fadeTo(0, 0.2, function() {} )
+                     $('#PlayBar').fadeTo(0, 0.2, function() {} )
              },      
              function() {
-                    $('#playbar').fadeTo(0, 0.02, function() {} )
+                    $('#PlayBar').fadeTo(0, 0.02, function() {} )
              }
               });
        });
