@@ -21,6 +21,35 @@ window.addEventListener('load', function(e) {
   // ...call requestAnimationFrame() and render the analyser's output to canvas.
 }, false);
 
+var canvas = document.getElementById( 'canvas' );
+var canvasWidth = canvas.width;
+var canvasHeight = canvas.height;
+var rectWidth = 20;
+var ctx = canvas.getContext( '2d' );
+
+var draw = function() {
+    analyser.getByteFrequencyData( dataArray );
+
+    // Sum frequency amplitudes
+    var values = 0;
+    for ( var i = 0; i < bufferLength; i++ ) {
+         values += dataArray[ i ];
+    }
+
+    var volume = values / bufferLength;
+
+    ctx.clearRect( 0, 0, canvasWidth, canvasHeight );
+    ctx.fillStyle = 'black';
+    ctx.fillRect(
+        canvasWidth / 2 - rectWidth / 2,
+        canvasHeight / 2 - volume / 2,
+        rectWidth,
+        volume
+    );
+    requestAnimationFrame( draw );
+};
+
+
 function aud_play_pause() {
     if (audio.paused) {
       //  $('#stateicon').removeClass('fa fa-play');
@@ -32,3 +61,5 @@ function aud_play_pause() {
       audio.pause();
    }
  }
+ 
+ 
