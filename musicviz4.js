@@ -8,7 +8,9 @@ document.body.appendChild(audio);
 
 var context = new webkitAudioContext();
 var analyser = context.createAnalyser();
-var bufferLength = 1024;
+analyser.smoothingTimeConstant = 0.3;
+analyser.fftSize = 1024;
+var bufferLength = analyser.fftSize;
 var dataArray = new Uint8Array( bufferLength );
 
 // Wait for window.onload to fire. See crbug.com/112368
@@ -20,6 +22,21 @@ window.addEventListener('load', function(e) {
 
   // ...call requestAnimationFrame() and render the analyser's output to canvas.
 }, false);
+
+// This will periodically compute average volume and log it out
+setInterval( function() {
+    analyser.getByteFrequencyData( dataArray );
+
+    // Sum frequency amplitudes
+    var values = 0;
+    for ( var i = 0; i < bufferLength; i++ ) {
+         values += dataArray[ i ];
+    }
+
+    // Log average volume
+    console.log( values / bufferLength );
+}, 100 );
+
 
 var canvas = document.getElementById( 'canvas' );
 var canvasWidth = canvas.width;
