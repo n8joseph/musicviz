@@ -12,11 +12,11 @@ $(document).ready(function() {
 $(document).ready(function() {
       $('#playbar').mouseover(function() {
              $('#playbar').hover(function() {
-                     $('#PlayBar').fadeTo(0, 0.2, function() {} )
+                     $('#PlayBar').fadeTo("slow", 0.2, function() {} )
              },      
              function() {
-                    $('#PlayBar').fadeTo(0, 0.02, function() {} )
-             }
+                    $('#PlayBar').fadeTo(0, 0.02, function() {} );
+             };
               });
        });
 });
