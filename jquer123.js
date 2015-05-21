@@ -7,7 +7,9 @@ $(document).ready(function() {
               $('#slickbox').toggle(400);
               return false;
        });
-       
+});
+
+$(document).ready(function() {
       $('#playbar').mouseover(function() {
              $('#playbar').hover(function() {
                      $('#PlayBar').fadeTo(0, 0.2, function() {} )
