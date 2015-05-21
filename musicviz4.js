@@ -8,6 +8,8 @@ document.body.appendChild(audio);
 
 var context = new webkitAudioContext();
 var analyser = context.createAnalyser();
+var bufferLength = 1024;
+var dataArray = new Uint8Array( bufferLength );
 
 // Wait for window.onload to fire. See crbug.com/112368
 window.addEventListener('load', function(e) {
