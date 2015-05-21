@@ -16,7 +16,7 @@ $(document).ready(function() {
              },      
              function() {
                     $('#PlayBar').fadeTo(0, 0.02, function() {} );
-             };
+             }
               });
        });
 });
