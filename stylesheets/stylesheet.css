@@ -19,4 +19,13 @@ a {
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
+    
+#theplaybar {
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 1";
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 130px
+}
+
 
